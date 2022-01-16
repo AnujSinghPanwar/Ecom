@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import "../App.css";
 import { useDispatch } from "react-redux";
@@ -45,9 +45,9 @@ const Cart = () => {
                   </thead>
                   <tbody>
                     {CartItems.map((cartPro) => (
-                      <tr>
+                      <tr key={cartPro.id}>
                         <td>
-                          <img src={cartPro.image} style={{ height: "6rem" }} />
+                          <img src={cartPro.image} alt={cartPro.title} style={{ height: "6rem" }} />
                         </td>
                         <td>{cartPro.title}</td>
                         <td>

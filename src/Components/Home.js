@@ -1,8 +1,7 @@
 import React from "react";
 import Corsoul from "./Corsoul";
 import Product from "./Product";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const data = useSelector((state) => state.Product.AllProduct);
